@@ -1,0 +1,46 @@
+const App = () => {
+
+  return (
+    <>
+      <nav className="flex align-center justify-center py-5 text-2xl">
+        <ul className="flex gap-7 align-center">
+          <li className="gap-3 rounded-tr-lg rounded-bl-lg px-5 py-1  transition-all  hover:bg-yellow-300 hover:shadow-gray-500 hover:shadow-xs"><a href="#" className="">Home</a></li>
+          <li className="gap-3 rounded-tr-lg rounded-bl-lg px-5 py-1  transition-all  hover:bg-yellow-300 hover:shadow-gray-500 hover:shadow-xs"><a href="#keunggulan" className="">Keunggulan</a></li>
+          <li className="gap-3 rounded-tr-lg rounded-bl-lg px-5 py-1  transition-all  hover:bg-yellow-300 hover:shadow-gray-500 hover:shadow-xs"><a href="#fasilitas">Fasilitas</a></li>
+          <li className="gap-3 rounded-tr-lg rounded-bl-lg px-5 py-1  transition-all  hover:bg-yellow-300 hover:shadow-gray-500 hover:shadow-xs"><a href="#paket">Paket</a></li>
+          <li className="gap-3 rounded-tr-lg rounded-bl-lg px-5 py-1  transition-all  hover:bg-yellow-300 hover:shadow-gray-500 hover:shadow-xs"><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <main id="#" className="flex flex-col justify-center items-center" >
+        <div className="container bg-green-500">
+        <img src="./assets/banner.png" alt="banner" />
+          <h1 className="text-5xl">Selamat datang di BaGYM</h1>
+          <p className="text-3xl pt-10">Mau body <strong className="text-red-600">atletis</strong> tapi dompet lagi <em className="text-red-600 font-bold bg-yellow-400 rounded-2xl px-3">tipis?</em> BaGYM solusi kaum realitis.</p>
+
+          <a href="#paket" className="px-3 py-2 rounded bg-yellow-300 text-center">Ayo Mulai</a>
+        </div>
+      </main>
+
+      <section id="keunggulan" className="container">
+        <div className="p-5 m-5 bg-red-800">
+          <p>Ini bagian keunggulan</p>
+
+        </div>
+      </section>
+
+      <section id="fasilitas" className="container">
+        <p>Ini bagian Fasilitia</p>
+
+      </section>
+
+      <section id="paket" className="container">
+        <p>Ini bagian Paket</p>
+
+      </section>
+
+    </>
+  )
+}
+
+export default App;
