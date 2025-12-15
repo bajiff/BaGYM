@@ -1,1 +1,6 @@
+/* ! app.css */
 @import "tailwindcss";
+@theme {
+  --color-dark: #020103;
+  --color-light: #fff000;
+};
