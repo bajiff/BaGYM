@@ -7,7 +7,7 @@ const PricingSection = () => (
         <h2 className="text-4xl font-bold mb-4 tracking-tight">Pilihan Paket</h2>
         <p className="text-[#020103]/70 max-w-xl mx-auto">Sangat terjangkau khususnya bagi kaum realistis</p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 md:flex md:flex-col gap-8 items-center">
+      <div className="flex flex-col gap-10 lg:grid lg:grid-cols-3">
         {packages.map((pkg, index) => (
           <div key={index} className={`p-10 rounded-3xl border ${pkg.featured ? 'bg-[#020103] text-white border-[#020103] shadow-2xl scale-105 z-10' : 'bg-white border-[#020103]/10 text-[#020103]'}`}>
             {pkg.featured && <span className="bg-[#fff7e8] text-[#020103] text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4 inline-block">Best Value</span>}
