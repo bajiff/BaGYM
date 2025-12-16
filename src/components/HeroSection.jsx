@@ -18,9 +18,9 @@ const HeroSection = () => (
       </div>
       <div className="flex-1 hidden md:block">
         {/* Jika ada banner.png, gunakan ini. Jika tidak, gunakan placeholder */}
-        {/* <img src="./assets/banner.png" alt="BaGYM Athlete" className="w-full h-auto object-cover mask-image-gradient" /> */}
+        {/* <img src="../assets/banner.png" alt="BaGYM Athlete" className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500" /> */}
          <div className="w-full aspect-square from-[#fff7e8]/20 to-transparent rounded-3xl relative overflow-hidden border border-[#fff7e8]/10 p-2">
-             <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1470&auto=format&fit=crop" alt="Placeholder Gym" className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500"/>
+             <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1470&auto=format&fit=crop" alt="Placeholder Gym" className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500" />
          </div>
       </div>
     </div>
