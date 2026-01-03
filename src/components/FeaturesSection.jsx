@@ -1,6 +1,6 @@
 import { features } from "../utils";
 const FeaturesSection = () => (
-  <section id="keunggulan" className="min-h-screen flex items-center bg-[#fff7e8] text-[#020103] ">
+  <section id="keunggulan" className="min-h-screen flex items-center pt-10 lg:pt-0 bg-[#fff7e8] text-[#020103] ">
     <div className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-4 tracking-tight">Mengapa BaGYM?</h2>
