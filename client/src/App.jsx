@@ -9,15 +9,17 @@ const App = () => {
       <FacilitiesSection />
       <PricingSection />
       <TestimonialSection />
-      {/* <section className="bg-white py-10 mt-10">
-          <div className="text-center mb-5">
-              <h1 className="text-4xl text-black font-bold">ADMIN AREA (TESTING)</h1>
-          </div>
-          <MemberList />
-      </section> */}
       <Footer />
     </main>
   );
 };
 
 export default App;
+
+
+      {/* <section className="bg-white py-10 mt-10">
+          <div className="text-center mb-5">
+              <h1 className="text-4xl text-black font-bold">ADMIN AREA (TESTING)</h1>
+          </div>
+          <MemberList />
+      </section> */}
