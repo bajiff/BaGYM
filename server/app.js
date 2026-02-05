@@ -2,15 +2,19 @@
 import express from 'express';
 import cors from 'cors';
 import db from './config/database.js';
-// WAJIB pakai .js di belakang untuk file lokal
+import memberRoutes from './routes/memberRoutes.js';
+// ! WAJIB pakai .js di belakang untuk file lokal
 
-// Inisialisasi App
+// ? Inisialisasi App
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Routes
+app.use('/api', memberRoutes)
 
 // Test Route (Versi MySQL)
 app.get('/', async (req, res) => {
