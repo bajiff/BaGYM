@@ -1,6 +1,5 @@
 import { useState , useEffect} from "react";
 import { Link } from "react-router-dom";
-import { navigation } from "../utils";
 const Navbar = () => {
 
   const [scrolled, setScrolled] = useState(false);
@@ -20,19 +19,15 @@ const Navbar = () => {
           BaGYM<span className="text-white">.</span>
         </div>
         <ul className="hidden md:flex gap-8">
-          {navigation.map((item) => (
-            <li key={item.name}>
-              <a href={item.href} className="text-white/80 hover:text-[#fff7e8] transition-colors text-sm uppercase tracking-wider font-medium">
-                {item.name}
-              </a>
-            </li>
-          ))}
+          <li><a href="#">Home</a></li>
+          <li><a href="#keunggulan">Keunggulan</a></li>
+          <li><a href="#fasilitas">Fasilitas</a></li>
+          <li><a href="#paket">Paket</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><Link to="/login">Login</Link></li>
         </ul>
         {/* Mobile menu button placeholder */}
       </div>
-      {/* <Link to="/login" className="px-5 py-2 bg-green-600 rounded-full hover:bg-green-700 transition">
-          Login Admin
-       </Link> */}
     </nav>
   );
 };
