@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import api from '../utils/api.js';
-
+import { useNavigate } from 'react-router-dom'; // <--- 1. Import ini
 const LoginPage = ({ onLoginSuccess }) => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -23,6 +24,8 @@ const LoginPage = ({ onLoginSuccess }) => {
 
             alert(`Selamat datang, ${user.name}!`);
             
+            navigate('/dashbaord')
+                  
             // Panggil fungsi parent untuk pindah halaman
             if (onLoginSuccess) onLoginSuccess(user);
             

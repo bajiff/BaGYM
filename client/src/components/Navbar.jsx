@@ -1,4 +1,5 @@
 import { useState , useEffect} from "react";
+import { Link } from "react-router-dom";
 import { navigation } from "../utils";
 const Navbar = () => {
 
@@ -29,6 +30,9 @@ const Navbar = () => {
         </ul>
         {/* Mobile menu button placeholder */}
       </div>
+      <Link to="/login" className="px-5 py-2 bg-green-600 rounded-full hover:bg-green-700 transition">
+          Login Admin
+       </Link>
     </nav>
   );
 };

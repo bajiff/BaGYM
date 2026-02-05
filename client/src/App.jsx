@@ -1,4 +1,6 @@
-import {FacilitiesSection, FeaturesSection, Footer, HeroSection, Navbar, PricingSection, TestimonialSection, MemberList} from "./components/Index";
+import {FacilitiesSection, FeaturesSection, Footer, HeroSection, Navbar, PricingSection, TestimonialSection} from "./components/Index";
+
+import {DashboardPage, LandingPage, LoginPage} from "./pages/Index.js";
 
 const App = () => {
   return (
@@ -15,11 +17,3 @@ const App = () => {
 };
 
 export default App;
-
-
-      {/* <section className="bg-white py-10 mt-10">
-          <div className="text-center mb-5">
-              <h1 className="text-4xl text-black font-bold">ADMIN AREA (TESTING)</h1>
-          </div>
-          <MemberList />
-      </section> */}
