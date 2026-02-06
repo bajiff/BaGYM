@@ -7,24 +7,31 @@ const JWT_SECRET = process.env.JWT_SECRET || 'rahasia_negara_bagym_2026';
 
 // 1. REGISTER (Hanya untuk bikin Admin pertama kali)
 export const register = async (req, res) => {
-    const { name, email, password, role } = req.body;
+    // Terima data tambahan: phone_number & gender
+    const { name, email, password, phone_number, gender } = req.body;
 
     try {
-        // Cek email ganda
+        // 1. Cek email ganda
         const [existingUser] = await db.query("SELECT * FROM users WHERE email = ?", [email]);
         if (existingUser.length > 0) return res.status(400).json({ message: "Email sudah terdaftar!" });
 
-        // Enkripsi Password
+        // 2. Hash Password
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
 
-        // Simpan ke DB
-        await db.query(
+        // 3. Simpan ke DB Users
+        // PENTING: Role kita paksa jadi 'member' untuk pendaftar umum
+        const [userResult] = await db.query(
             "INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)", 
-            [name, email, hashedPassword, role || 'member']
+            [name, email, hashedPassword, 'member']
         );
 
-        res.status(201).json({ message: "User berhasil didaftarkan!" });
+        // 4. (Opsional tapi Bagus)
+        // Kalau mau langsung catat data detail ke tabel 'members' juga, bisa dilakukan di sini.
+        // Tapi untuk sekarang, kita simpan akun loginnya dulu saja.
+        
+        res.status(201).json({ success: true, message: "Akun berhasil dibuat! Silakan login." });
+
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
